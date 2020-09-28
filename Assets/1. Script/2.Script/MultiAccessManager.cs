@@ -27,6 +27,8 @@ public class MultiAccessManager : MonoBehaviourPunCallbacks
     public InputField InputField_Info;
     public string NickName;
 
+    public static string room_name;
+
     // 이거는 텍스트 + 동그라미 색깔로. 위치는 UserInfo 옆에
     // public InputField roomInput, NickNameInput;
     // 방 이름 입력받는 건 클릭했을 때 text로 소원이 씬에 넘기기로 했으니까 없애도 될 것 같고 + NickName은 UserInfo 받으니까 얘도 소원이 씬에 넘기면서 없앨까?
@@ -70,6 +72,7 @@ public class MultiAccessManager : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinOrCreateRoom(room0_Text.text, new RoomOptions { MaxPlayers = 20 }, null);
         print("0번방");
         SceneManager.LoadScene("ClassScene");
+        room_name = room0_Text.text;
     }
 
     public void JoinOrCreateRoom1()
@@ -77,30 +80,35 @@ public class MultiAccessManager : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinOrCreateRoom(room1_Text.text, new RoomOptions { MaxPlayers = 20 }, null);
         print("1번방");
         SceneManager.LoadScene("ClassScene");
+        room_name = room1_Text.text;
     }
     public void JoinOrCreateRoom2()
     {
         PhotonNetwork.JoinOrCreateRoom(room2_Text.text, new RoomOptions { MaxPlayers = 20 }, null);
         print("2번방");
         SceneManager.LoadScene("ClassScene");
+        room_name = room2_Text.text;
     }
     public void JoinOrCreateRoom3()
     {
         PhotonNetwork.JoinOrCreateRoom(room3_Text.text, new RoomOptions { MaxPlayers = 20 }, null);
         print("3번방");
         SceneManager.LoadScene("ClassScene");
+        room_name = room3_Text.text;
     }
     public void JoinOrCreateRoom4()
     {
         PhotonNetwork.JoinOrCreateRoom(room4_Text.text, new RoomOptions { MaxPlayers = 20 }, null);
         print("4번방");
         SceneManager.LoadScene("ClassScene");
+        room_name = room4_Text.text;
     }
     public void JoinOrCreateRoom5()
     {
         PhotonNetwork.JoinOrCreateRoom(room5_Text.text, new RoomOptions { MaxPlayers = 20 }, null);
         print("5번방");       
         SceneManager.LoadScene("ClassScene");
+        room_name = room5_Text.text;
     }
 
     /*

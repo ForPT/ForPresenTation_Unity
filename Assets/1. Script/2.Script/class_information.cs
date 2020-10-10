@@ -34,7 +34,6 @@ public class class_information : MonoBehaviour
     {
         if (PhotonNetwork.InRoom) file_chul_text.text = PhotonNetwork.NetworkClientState.ToString() + "\n현재 방 이름 : " + PhotonNetwork.CurrentRoom.Name + "\n현재 방 인원수 : " + PhotonNetwork.CurrentRoom.PlayerCount + "\n현재 방 최대인원수 : " + PhotonNetwork.CurrentRoom.MaxPlayers;
         else file_chul_text.text = "연결되지 않았습니다.";
-
     }
 
     public void onClick_Exit()
@@ -43,7 +42,6 @@ public class class_information : MonoBehaviour
         file_chul.SetActive(true);
         PhotonNetwork.LeaveRoom();
         SceneManager.LoadScene("LobyScene");
-
     }
 
     public void onClick_Back_to_seat()
